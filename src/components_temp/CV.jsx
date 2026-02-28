@@ -1,4 +1,4 @@
-import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
+import { AnimatedThemeToggler } from "@/components_temp/ui/animated-theme-toggler";
 import { ExperienceSection } from "./ExperienceSection";
 import profilePic from "@/assets/picture.jpg";
 

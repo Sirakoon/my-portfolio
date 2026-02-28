@@ -1,5 +1,5 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import CV from "./components/CV";
+import CV from "./components_temp/CV";
 
 function App() {
   return (
