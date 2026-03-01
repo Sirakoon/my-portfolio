@@ -8,6 +8,19 @@ import {
   HiShieldCheck,
   HiBugAnt,
 } from "react-icons/hi2";
+import { SiNodered } from "react-icons/si";
+import { FaNodeJs } from "react-icons/fa";
+import { PiFileSqlDuotone } from "react-icons/pi";
+import { FaReact } from "react-icons/fa6";
+
+const tags = [
+  { name: "Node.js", icon: <FaNodeJs />, color: "text-green-500" },
+  { name: "Express", icon: <FaNodeJs />, color: "text-green-500"  },
+  { name: "MSSQL", icon: <PiFileSqlDuotone />, color: "text-blue-500" },
+  { name: "React", icon: <FaReact />, color: "text-blue-400" },
+  { name: "Node-RED", icon: <SiNodered />, color: "text-red-500" },
+  { name: "Power Automate" },
+];
 
 const experiences = [
   {
@@ -18,7 +31,7 @@ const experiences = [
       {
         title: "BACKEND DEVELOPER (INTERNAL SYSTEMS)",
         period: "December 2023 – Present",
-        tags: ["Node.js", "Express", "MSSQL", "React", "Node-RED", "Power Automate"],
+        tags: [tags[0], tags[1], tags[2], tags[3], tags[4], tags[5]],
         bullets: [
           "Built internal web applications for stock, calibration due-date tracking, equipment borrowing, and NG board monitoring",
           "Designed MSSQL schema (tables, keys, indexing where applicable) and implemented CRUD flows",
@@ -169,16 +182,27 @@ function ExperienceCard({ exp }) {
 
             {role.tags?.length > 0 && (
               <div className="mt-3 flex flex-wrap gap-2">
-                {role.tags.map((t) => (
-                  <span
-                    key={t}
-                    className="inline-flex items-center rounded-full border border-border px-2.5 py-1 text-xs text-muted-foreground"
-                  >
-                    {t}
-                  </span>
-                ))}
+                {role.tags.map((tag) => {
+                  const isString = typeof tag === "string";
+
+                  const key = isString ? tag : tag.name;
+                  const name = isString ? tag : tag.name;
+                  const icon = isString ? null : tag.icon;
+                  const color = isString ? "text-muted-foreground" : (tag.color || "text-muted-foreground");
+
+                  return (
+                    <span
+                      key={key}
+                      className={`inline-flex items-center gap-1 rounded-full border border-border px-2.5 py-1 text-xs ${color}`}
+                    >
+                      {icon && <span className="text-base">{icon}</span>}
+                      {name}
+                    </span>
+                  );
+                })}
               </div>
             )}
+
 
             {role.bullets?.length > 0 && (
               <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
