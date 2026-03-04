@@ -102,7 +102,7 @@ export function ExperienceSection() {
         </div>
       </div>
 
-      {/* Timeline 1 */}
+      {/* Timeline */}
       <div className="mt-8 relative">
         <div className="absolute left-[14px] top-0 h-full w-px bg-border sm:left-1/2 sm:-translate-x-1/2" />
 
