@@ -5,88 +5,12 @@ import {
   HiMapPin,
   HiChartBarSquare,
   HiWrenchScrewdriver,
-  HiShieldCheck,
-  HiBugAnt,
 } from "react-icons/hi2";
-import { SiNodered } from "react-icons/si";
-import { FaNodeJs } from "react-icons/fa";
-import { PiFileSqlDuotone } from "react-icons/pi";
-import { FaReact } from "react-icons/fa6";
+import { experiences } from "../../data/experiences.jsx";
 
-
-const tags = [
-  { name: "Node.js", icon: <FaNodeJs />, color: "text-green-500" },
-  { name: "Express", icon: <FaNodeJs />, color: "text-green-500" },
-  { name: "MSSQL", icon: <PiFileSqlDuotone />, color: "text-blue-500" },
-  { name: "React", icon: <FaReact />, color: "text-blue-400" },
-  { name: "Node-RED", icon: <SiNodered />, color: "text-red-500" },
-  { name: "Power Automate" },
-];
-
-const experiences = [
-  {
-    company: "Delta Electronics (Thailand)",
-    location: "Bangpoo, Samut Prakarn",
-    overallPeriod: "December 2023 – Present",
-    roles: [
-      {
-        title: "BACKEND DEVELOPER (INTERNAL SYSTEMS)",
-        period: "December 2023 – Present",
-        tags: [tags[0], tags[1], tags[2], tags[3], tags[4], tags[5]],
-        bullets: [
-          "Built internal web applications for stock, calibration due-date tracking, equipment borrowing, and NG board monitoring",
-          "Designed MSSQL schema (tables, keys, indexing where applicable) and implemented CRUD flows",
-          "Developed RESTful APIs (Node.js/Express) for production detection integration and internal services",
-          "Implemented authentication/authorization and role-based access",
-          "Automated workflow/integration using Node-RED and Power Automate (data flow + notifications)",
-        ],
-        impact: [
-          "Decreased issue response time by integrating real-time monitoring system",
-          "Improved calibration due-date compliance through automated notification workflow",
-          "Reduced manual Excel tracking by ~6 hours/week by implementing web dashboard",
-        ],
-      },
-      {
-        title: "PRODUCT ENGINEER / FAILURE ANALYSIS (PE/FA)",
-        period: "December 2023 – Present",
-        tags: ["Testing", "RCA/CAPA", "Validation", "NPI", "Failure Analysis"],
-        bullets: [
-          "Designed and implemented automated test jigs and validation programs for automotive power systems",
-          "Evaluated and verified engineering design changes and factory process alterations",
-          "Verified TS (Test Specification) and TE test items to ensure compliance with customer requirements",
-          "Executed test plans and prepared comprehensive test reports",
-          "Performed functional, performance, and regression testing of products",
-          "Consolidated and tracked product trial issues during NPI and mass production",
-          "Identified, reported, and monitored failures via issue tracking log",
-          "Conducted root cause analysis (RCA) and supported corrective/preventive actions (CAPA)",
-          "Performed benchmark testing of automotive power train systems including: bench functional integration, test execution & instrumentation measurement, incident reporting and failure investigation",
-        ],
-      },
-    ],
-  },
-  {
-    company: "Quanta Thailand",
-    location: "Banbueng, Chonburi",
-    overallPeriod: "June 2022 – November 2023",
-    roles: [
-      {
-        title: "TEST ENGINEER",
-        period: "June 2022 – November 2023",
-        tags: ["Testing", "Regression", "ICT", "Fixture", "Flow improvement"],
-        bullets: [
-          "Debugged ICT test programs and modified test flow based on BOM changes",
-          "Supported fixture/machine setup and improved daily maintenance workflow",
-          "Coordinated cross-team issue triage and production incident handling",
-        ],
-      },
-    ],
-  },
-];
-
-export function ExperienceSection() {
+export default function ExperienceSection() {
   return (
     <section className="mt-16">
-      {/* Header */}
       <div className="flex items-end justify-between gap-4">
         <div>
           <h2 className="text-2xl font-semibold uppercase tracking-wide">
@@ -97,14 +21,13 @@ export function ExperienceSection() {
           </p>
         </div>
 
-        <div className="hidden sm:flex items-center gap-2 text-xs text-muted-foreground">
+        <div className="hidden items-center gap-2 text-xs text-muted-foreground sm:flex">
           <HiBriefcase className="h-4 w-4" />
           Timeline view
         </div>
       </div>
 
-      {/* Timeline */}
-      <div className="mt-8 relative">
+      <div className="relative mt-8">
         <div className="absolute left-[14px] top-0 h-full w-px bg-border sm:left-1/2 sm:-translate-x-1/2" />
 
         <div className="space-y-12">
@@ -113,9 +36,8 @@ export function ExperienceSection() {
 
             return (
               <div key={exp.company} className="relative">
-                {/* Dot */}
                 <div className="absolute left-[14px] top-6 -translate-x-1/2 sm:left-1/2 sm:-translate-x-1/2">
-                  <div className="grid place-items-center h-9 w-9 rounded-full border border-border bg-background shadow-sm">
+                  <div className="grid h-9 w-9 place-items-center rounded-full border border-border bg-background shadow-sm">
                     {exp.company.includes("Delta") ? (
                       <HiBuildingOffice2 className="h-4 w-4" />
                     ) : (
@@ -124,19 +46,15 @@ export function ExperienceSection() {
                   </div>
                 </div>
 
-                {/* Layout */}
-                <div className="pl-12 sm:pl-0 sm:grid sm:grid-cols-2 sm:gap-10">
-                  {/* Left column — shows only on sm+ */}
+                <div className="pl-12 sm:grid sm:grid-cols-2 sm:gap-10 sm:pl-0">
                   <div className="hidden sm:block">
                     {!isRight && <ExperienceCard exp={exp} />}
                   </div>
 
-                  {/* Right column — shows only on sm+ */}
                   <div className="hidden sm:block">
                     {isRight && <ExperienceCard exp={exp} />}
                   </div>
 
-                  {/* Mobile — always visible, card shown once */}
                   <div className="sm:hidden">
                     <ExperienceCard exp={exp} />
                   </div>
@@ -152,7 +70,7 @@ export function ExperienceSection() {
 
 function ExperienceCard({ exp }) {
   return (
-    <div className="rounded-2xl border border-border bg-card text-card-foreground shadow-sm p-6">
+    <div className="rounded-2xl border border-border bg-card p-6 text-card-foreground shadow-sm">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
           <h3 className="text-lg font-semibold">{exp.company}</h3>
@@ -189,7 +107,9 @@ function ExperienceCard({ exp }) {
                   const key = isString ? tag : tag.name;
                   const name = isString ? tag : tag.name;
                   const icon = isString ? null : tag.icon;
-                  const color = isString ? "text-muted-foreground" : (tag.color || "text-muted-foreground");
+                  const color = isString
+                    ? "text-muted-foreground"
+                    : (tag.color || "text-muted-foreground");
 
                   return (
                     <span
@@ -204,12 +124,11 @@ function ExperienceCard({ exp }) {
               </div>
             )}
 
-
             {role.bullets?.length > 0 && (
               <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
                 {role.bullets.map((b) => (
                   <li key={b} className="flex gap-3">
-                    <span className="mt-2 h-1.5 w-1.5 rounded-full bg-foreground/40 shrink-0" />
+                    <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-foreground/40" />
                     <span>{b}</span>
                   </li>
                 ))}
@@ -225,7 +144,7 @@ function ExperienceCard({ exp }) {
                 <ul className="mt-2 space-y-2 text-sm text-muted-foreground">
                   {role.impact.map((i) => (
                     <li key={i} className="flex gap-3">
-                      <span className="mt-2 h-1.5 w-1.5 rounded-full bg-primary shrink-0" />
+                      <span className="mt-2 h-1.5 w-1.5 shrink-0 rounded-full bg-primary" />
                       <span>{i}</span>
                     </li>
                   ))}
