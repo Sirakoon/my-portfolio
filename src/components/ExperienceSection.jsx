@@ -135,10 +135,7 @@ export function ExperienceSection() {
                     {isRight && <ExperienceCard exp={exp} />}
                   </div>
 
-<<<<<<< HEAD
                   {/* Mobile — always visible, card shown once */}
-=======
->>>>>>> 882f80834794bb61c7828340d13e413c5639b128
                   <div className="sm:hidden">
                     <ExperienceCard exp={exp} />
                   </div>
