@@ -1,6 +1,7 @@
 import { AnimatedThemeToggler } from "@/components/ui/animated-theme-toggler";
 import { ExperienceSection } from "./ExperienceSection";
 import profilePic from "@/assets/picture.jpg";
+import { SkillsSection } from "./SkillsSection";
 
 function CV() {
   return (
@@ -75,6 +76,7 @@ function CV() {
 
         {/* Experience Section */}
         <section>
+          <SkillsSection />
           <ExperienceSection />
         </section>
 
