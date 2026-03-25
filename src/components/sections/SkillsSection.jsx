@@ -1,14 +1,16 @@
-import { LuSparkles, LuCpu, LuServer, LuDatabase, LuWrench, LuSettings2 } from "react-icons/lu";
-import { LuCode } from "react-icons/lu"; 
-
+import { 
+  LuSparkles, LuCpu, LuServer, LuDatabase, LuWrench, LuSettings2, LuTerminal 
+} from "react-icons/lu";
 import { 
   SiPython, SiJavascript, SiReact, SiTailwindcss, SiNodedotjs, 
-  SiPostgresql, SiMysql, SiGithub, SiHtml5, SiCss3, SiNodered 
+  SiPostgresql, SiMysql, SiGithub, SiHtml5, SiCss3, SiNodered, SiGit 
 } from "react-icons/si";
 import { TbBrandCSharp, TbApi, TbSettingsAutomation } from "react-icons/tb";
 import { skills } from "../../data/skills.jsx";
 
+// 1. Map สำหรับ Icon ของแต่ละ Item
 const itemIconMap = {
+  // Frontend & Languages
   "React": <SiReact className="mr-1.5 h-3.5 w-3.5 text-[#61DAFB]" />,
   "JavaScript": <SiJavascript className="mr-1.5 h-3.5 w-3.5 text-[#F7DF1E]" />,
   "Tailwind CSS": <SiTailwindcss className="mr-1.5 h-3.5 w-3.5 text-[#06B6D4]" />,
@@ -17,25 +19,31 @@ const itemIconMap = {
   "Python": <SiPython className="mr-1.5 h-3.5 w-3.5 text-[#3776AB]" />,
   "python": <SiPython className="mr-1.5 h-3.5 w-3.5 text-[#3776AB]" />,
   "C#": <TbBrandCSharp className="mr-1.5 h-4 w-4 text-[#239120]" />,
+  
+  // Backend
   "Node.js": <SiNodedotjs className="mr-1.5 h-3.5 w-3.5 text-[#339933]" />,
   "Express": <LuServer className="mr-1.5 h-3.5 w-3.5 text-slate-400" />,
   "REST API": <TbApi className="mr-1.5 h-4 w-4 text-blue-400" />,
+  
+  // Database
   "MSSQL": <LuDatabase className="mr-1.5 h-3.5 w-3.5 text-[#CC2927]" />,
   "MySQL": <SiMysql className="mr-1.5 h-3.5 w-3.5 text-[#4479A1]" />,
   "PostgreSQL": <SiPostgresql className="mr-1.5 h-3.5 w-3.5 text-[#4169E1]" />,
+  
+  // Tools & Automation
   "Node-RED": <SiNodered className="mr-1.5 h-3.5 w-3.5 text-[#8F0000]" />,
   "Power Automate": <TbSettingsAutomation className="mr-1.5 h-3.5 w-3.5 text-blue-500" />,
+  "Git": <SiGit className="mr-1.5 h-3.5 w-3.5 text-[#F05032]" />, // เพิ่ม Git Icon สีส้มมาตรฐาน
   "GitHub": <SiGithub className="mr-1.5 h-3.5 w-3.5 text-foreground" />,
-  "Git": <LuWrench className="mr-1.5 h-3.5 w-3.5 text-orange-500" />,
 };
 
-
+// 2. Map สำหรับ Icon ของหมวดหมู่ (Category)
 const categoryIconMap = {
-  "Frontend": <LuCode className="h-4 w-4 text-blue-500" />, 
+  "Frontend": <LuTerminal className="h-4 w-4 text-blue-500" />, // ใช้ LuTerminal แทน LuCode เพื่อความชัวร์
   "Backend": <LuServer className="h-4 w-4 text-green-500" />,
   "Database": <LuDatabase className="h-4 w-4 text-purple-500" />,
   "Automation / Tools": <LuSettings2 className="h-4 w-4 text-orange-500" />,
-  "Engineering / QA": <LuSparkles className="h-4 w-4 text-yellow-500" />,
+  "Engineering / QA": <LuWrench className="h-4 w-4 text-red-500" />,
 };
 
 export default function SkillsSection() {
