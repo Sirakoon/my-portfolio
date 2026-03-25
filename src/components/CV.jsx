@@ -5,7 +5,7 @@ import profilePic from "@/assets/picture.jpg";
 function CV() {
   return (
     <div className="min-h-screen bg-background text-foreground">
-      
+
       {/* Header */}
       <header className="sticky top-0 z-50 bg-background/80 backdrop-blur border-b border-border">
         <div className="mx-auto max-w-5xl px-6 py-4 flex items-center justify-between">
@@ -21,7 +21,7 @@ function CV() {
 
         {/* Hero Section */}
         <section className="flex flex-col md:flex-row items-center md:items-start gap-10">
-          
+
           {/* Profile Image */}
           <div className="shrink-0">
             <img
@@ -38,9 +38,9 @@ function CV() {
                 Contact Information
               </h2>
               <p className="mt-2 text-muted-foreground">
-                Samut Prakarn, Thailand  
+                Samut Prakarn, Thailand
                 <br />
-                +66 88 7028969  
+                +66 88 7028969
                 <br />
                 sirawitkoon47@gmail.com
               </p>
@@ -65,7 +65,7 @@ function CV() {
                 Education
               </h2>
               <p className="mt-2 text-muted-foreground">
-                Bachelor of Engineer – Electrical Power Engineering  
+                Bachelor of Engineer – Electrical Power Engineering
                 <br />
                 Burapha University (2017–2020)
               </p>
@@ -79,6 +79,16 @@ function CV() {
         </section>
 
       </main>
+
+      {/* <div>
+        <div className="flex items-center justify-center border-bs border-8" >
+          My projects
+          </div>
+      </div> */}
+
+      <div className="text-center text-sm text-muted-foreground py-6">
+        &copy; {new Date().getFullYear()} Sirawit Leamlert. All rights reserved.
+      </div>
     </div>
   );
 }

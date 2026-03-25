@@ -15,7 +15,7 @@ import { FaReact } from "react-icons/fa6";
 
 const tags = [
   { name: "Node.js", icon: <FaNodeJs />, color: "text-green-500" },
-  { name: "Express", icon: <FaNodeJs />, color: "text-green-500"  },
+  { name: "Express", icon: <FaNodeJs />, color: "text-green-500" },
   { name: "MSSQL", icon: <PiFileSqlDuotone />, color: "text-blue-500" },
   { name: "React", icon: <FaReact />, color: "text-blue-400" },
   { name: "Node-RED", icon: <SiNodered />, color: "text-red-500" },
@@ -125,17 +125,17 @@ export function ExperienceSection() {
 
                 {/* Layout */}
                 <div className="pl-12 sm:pl-0 sm:grid sm:grid-cols-2 sm:gap-10">
-                  {/* Left column */}
-                  <div className="sm:col-span-1">
+                  {/* Left column — shows only on sm+ */}
+                  <div className="hidden sm:block">
                     {!isRight && <ExperienceCard exp={exp} />}
                   </div>
 
-                  {/* Right column */}
-                  <div className="sm:col-span-1">
+                  {/* Right column — shows only on sm+ */}
+                  <div className="hidden sm:block">
                     {isRight && <ExperienceCard exp={exp} />}
                   </div>
 
-                  {/* Mobile: แสดงทุกใบในคอลัมน์เดียว */}
+                  {/* Mobile — always visible, card shown once */}
                   <div className="sm:hidden">
                     <ExperienceCard exp={exp} />
                   </div>

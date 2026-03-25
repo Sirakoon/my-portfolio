@@ -1,14 +1,17 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import CV from "./components/CV";
+import { HashRouter, Routes, Route } from "react-router-dom"
+import { ThemeProvider } from "@/components/theme-provider"
+import CV from "./components/CV"
 
 function App() {
   return (
-    <BrowserRouter basename="/my-portfolio">
-      <Routes>
-        <Route path="/" element={<CV />} />
-      </Routes>
-    </BrowserRouter>
-  );
+    <ThemeProvider attribute="class" defaultTheme="light" storageKey="theme">
+      <HashRouter>
+        <Routes>
+          <Route path="/" element={<CV />} />
+        </Routes>
+      </HashRouter>
+    </ThemeProvider>
+  )
 }
 
-export default App;
+export default App
