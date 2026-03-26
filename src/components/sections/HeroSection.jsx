@@ -13,7 +13,7 @@ export default function HeroSection() {
         <img
           src={profilePic}
           alt={profile.name}
-          className="h-56 w-56 rounded-2xl object-cover shadow-md"
+          className="h-84 w-56 rounded-2xl object-cover shadow-md"
         />
       </div>
 

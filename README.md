@@ -1,40 +1,49 @@
-# My Portfolio
+# Sirawit Leamlert — Portfolio
 
-Personal portfolio website built with React and Vite to present my background, technical skills, professional experience, and selected project showcases.
+Personal portfolio website built with React and Vite to showcase my background, technical skills, professional experience, and selected project concepts focused on internal systems, monitoring workflows, and backend-aware frontend development.
 
 ## Live Demo
+
 [View Portfolio](https://sirakoon.github.io/my-portfolio/)
 
 ## About
-This portfolio highlights my experience in:
+
+This portfolio highlights my work and interests in:
+
 - Internal web application development
 - Backend development with Node.js / Express
-- MSSQL database design and API integration
+- Dashboard and monitoring system design
+- MSSQL database structure and API thinking
 - Engineering workflow improvement and automation
 - Product engineering, testing, and failure analysis
 
 ## Tech Stack
+
 - React
 - Vite
 - Tailwind CSS
 - React Icons
+- React Router
+
+## Featured Projects
+
+### Calibration Tracking System
+A concept for improving calibration due-date visibility, equipment tracking, and follow-up workflows in internal engineering operations.
+
+### Trend Defect Dashboard
+A monitoring dashboard concept designed to improve recurring defect visibility, historical trend tracking, and reporting readiness across teams.
 
 ## Sections
-- Hero / Profile
-- Highlights
+
+- Hero / Introduction
+- About
 - Skills
 - Projects
 - Experience
-
-## Featured Projects
-### Calibration Tracking System
-Frontend mockup for tracking calibration due dates, equipment status, and compliance visibility for internal engineering operations.
-
-### Trend Defect Dashboard
-Dashboard mockup for visualizing defect trends and improving issue monitoring visibility.
+- Contact
 
 ## Getting Started
 
 ```bash
 npm install
-npm start
+npm run start
