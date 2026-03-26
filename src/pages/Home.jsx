@@ -3,7 +3,7 @@ import Footer from "../components/layout/Footer";
 import HeroSection from "../components/sections/HeroSection";
 import SkillsSection from "../components/sections/SkillsSection";
 import ExperienceSection from "../components/sections/ExperienceSection";
-// import ProjectsSection from "../components/sections/ProjectsSection";
+import ProjectsSection from "../components/sections/ProjectsSection";
 
 export default function Home() {
   return (
@@ -13,7 +13,7 @@ export default function Home() {
       <main className="mx-auto max-w-6xl px-4 py-10">
         <HeroSection />
         <SkillsSection />
-        {/* <ProjectsSection /> */}
+        <ProjectsSection />
         <ExperienceSection />
       </main>
 

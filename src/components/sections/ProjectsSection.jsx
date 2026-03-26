@@ -1,4 +1,6 @@
 import { projects } from "../../data/projects";
+import calibrationImg from "../../assets/images/Calibration.png";
+import trendDefectImg from "../../assets/images/Trend Defect.png";
 
 export default function ProjectsSection() {
   return (
@@ -18,8 +20,17 @@ export default function ProjectsSection() {
           >
             <div className="grid grid-cols-1 lg:grid-cols-2">
               <div className="border-b border-border bg-muted/30 lg:border-b-0 lg:border-r">
-                <div className="flex min-h-[260px] items-center justify-center text-sm text-muted-foreground">
-                  Project preview will be added later
+                <div className="flex flex-wrap items-center justify-center gap-4 my-3">
+                  <img
+                    src={calibrationImg}
+                    alt="Calibration"
+                    className="w-full max-w-md rounded-xl border border-border object-cover shadow-sm"
+                  />
+                  <img
+                    src={trendDefectImg}
+                    alt="Trend Defect"
+                    className="w-full max-w-md rounded-xl border border-border object-cover shadow-sm"
+                  />
                 </div>
               </div>
 
