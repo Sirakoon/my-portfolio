@@ -28,7 +28,7 @@ export default function ExperienceSection() {
       </div>
 
       <div className="relative mt-8">
-        <div className="absolute left-[14px] top-0 h-full w-px bg-border sm:left-1/2 sm:-translate-x-1/2" />
+        <div className="absolute left-3.5 top-0 h-full w-px bg-border sm:left-1/2 sm:-translate-x-1/2" />
 
         <div className="space-y-12">
           {experiences.map((exp, idx) => {
@@ -36,7 +36,7 @@ export default function ExperienceSection() {
 
             return (
               <div key={exp.company} className="relative">
-                <div className="absolute left-[14px] top-6 -translate-x-1/2 sm:left-1/2 sm:-translate-x-1/2">
+                <div className="absolute left-3.5top-6 -translate-x-1/2 sm:left-1/2 sm:-translate-x-1/2">
                   <div className="grid h-9 w-9 place-items-center rounded-full border border-border bg-background shadow-sm">
                     {exp.company.includes("Delta") ? (
                       <HiBuildingOffice2 className="h-4 w-4" />

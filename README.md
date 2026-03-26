@@ -1,16 +1,40 @@
-# React + Vite
+# My Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio website built with React and Vite to present my background, technical skills, professional experience, and selected project showcases.
 
-Currently, two official plugins are available:
+## Live Demo
+[View Portfolio](https://sirakoon.github.io/my-portfolio/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## About
+This portfolio highlights my experience in:
+- Internal web application development
+- Backend development with Node.js / Express
+- MSSQL database design and API integration
+- Engineering workflow improvement and automation
+- Product engineering, testing, and failure analysis
 
-## React Compiler
+## Tech Stack
+- React
+- Vite
+- Tailwind CSS
+- React Icons
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Sections
+- Hero / Profile
+- Highlights
+- Skills
+- Projects
+- Experience
 
-## Expanding the ESLint configuration
+## Featured Projects
+### Calibration Tracking System
+Frontend mockup for tracking calibration due dates, equipment status, and compliance visibility for internal engineering operations.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Trend Defect Dashboard
+Dashboard mockup for visualizing defect trends and improving issue monitoring visibility.
+
+## Getting Started
+
+```bash
+npm install
+npm start

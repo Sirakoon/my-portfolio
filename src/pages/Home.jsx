@@ -1,9 +1,10 @@
 import Header from "../components/layout/Header";
 import Footer from "../components/layout/Footer";
 import HeroSection from "../components/sections/HeroSection";
+import HighlightsSection from "../components/sections/HighlightsSection";
 import SkillsSection from "../components/sections/SkillsSection";
-import ExperienceSection from "../components/sections/ExperienceSection";
 import ProjectsSection from "../components/sections/ProjectsSection";
+import ExperienceSection from "../components/sections/ExperienceSection";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
 
       <main className="mx-auto max-w-6xl px-4 py-10">
         <HeroSection />
+        <HighlightsSection />
         <SkillsSection />
         <ProjectsSection />
         <ExperienceSection />
